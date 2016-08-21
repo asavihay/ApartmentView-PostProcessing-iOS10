@@ -3,4 +3,4 @@ Your Personal Awesome Movie Studio! SceneKit’s Post-Processing Effects in iOS 
 
 Code for the following [blog post](https://medium.com/@avihay/fb382cbc331f) 
 
-![ApartmentView](https://raw.githubusercontent.com/asavihay/PBROrbs-iOS10-SceneKit/master/Screenshots/screenshot.jpg)
+![ApartmentView](https://raw.githubusercontent.com/asavihay/ApartmentView-PostProcessing-iOS10/develop/Screenshots/screenshot.jpg)
