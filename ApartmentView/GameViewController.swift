@@ -25,6 +25,9 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
         
+        // place the camera
+        cameraNode.position = SCNVector3(x: 0, y: -9.0, z: 10)
+        
         // Post processing effects setup
         
         // (1) Add Vignette
@@ -39,12 +42,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         cameraNode.camera?.focalBlurRadius = 5.0
         cameraNode.camera?.focalDistance = 1.0
         
-        
         // Change the near field so items will not get occluded
         cameraNode.camera?.zNear = 0.1
-
-        // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: -9.0, z: 10)
         
         // Setup background - This will be the beautiful blurred background
         // that assist the user understand the 3D envirnoment
@@ -69,8 +68,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         scnView.allowsCameraControl = true
 
         // Add some cool animations
-        cameraNode.run(SCNAction.repeatForever(SCNAction.moveBy(x: -0.002, y: 0.002, z: -0.02, duration: 0.01)))
-        cameraNode.run(SCNAction.repeatForever(SCNAction.rotate(byAngle: 0.001, aroundAxis: SCNVector3Make(0.0, 1, 0), duration: 0.01)))
+        cameraNode.runAction(SCNAction.repeatForever(SCNAction.moveBy(x: -0.002, y: 0.002, z: -0.02, duration: 0.01)))
+        cameraNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: 0.001, around: SCNVector3Make(0.0, 1, 0), duration: 0.01)))
     
     }
     
